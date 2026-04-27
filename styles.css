@@ -1,17 +1,14 @@
-/* External CSS File */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: #0f172a;
     color: white;
     margin: 0;
-    padding: 0;
 }
 
 header {
     background-color: #1e293b;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 nav {
@@ -23,11 +20,11 @@ nav {
 nav a {
     color: #38bdf8;
     text-decoration: none;
-    font-weight: bold;
+    margin: 5px;
 }
 
 nav a:hover {
-    color: #facc15;
+    color: yellow;
 }
 
 main {
@@ -39,8 +36,8 @@ footer {
     text-align: center;
     padding: 15px;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
 table {
@@ -51,5 +48,4 @@ table {
 th, td {
     border: 1px solid white;
     padding: 10px;
-    text-align: center;
 }
