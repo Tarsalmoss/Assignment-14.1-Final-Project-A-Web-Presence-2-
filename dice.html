@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function playGame() {
+            let die1 = Math.floor(Math.random() * 6) + 1;
+            let die2 = Math.floor(Math.random() * 6) + 1;
+            let sum = die1 + die2;
+
+            document.getElementById("result").innerHTML =
+                "Die 1: " + die1 + "<br>Die 2: " + die2 + "<br>Sum: " + sum;
+
+            if (sum === 7 || sum === 11) {
+                document.getElementById("outcome").innerHTML = "You Lose!";
+            } else if (die1 === die2 && die1 % 2 === 0) {
+                document.getElementById("outcome").innerHTML = "You Win!";
+            } else {
+                document.getElementById("outcome").innerHTML = "Try Again!";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Dice Game</h1>
+</header>
+
+<nav>
+    <h2>Navigation</h2>
+    <a href="./index.html">Home</a><br>
+    <a href="./boards.html">Boards</a><br>
+    <a href="./dice.html">Dice Game</a><br>
+    <a href="./event.html">Event Handling</a><br>
+</nav>
+
+<main>
+    <button onclick="playGame()">Roll Dice</button>
+    <p id="result"></p>
+    <p id="outcome"></p>
+</main>
+
+<footer>
+    Ian Andalon<br>
+    University of Advancing Technology<br>
+    2625 W Baseline Rd<br>
+    Tempe, AZ 85283<br>
+</footer>
+
+</body>
+</html>
