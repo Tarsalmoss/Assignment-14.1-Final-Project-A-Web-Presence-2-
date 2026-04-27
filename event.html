@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        let interval;
+
+        function startMove() {
+            let img = document.getElementById("robot");
+            let position = 0;
+
+            interval = setInterval(() => {
+                position += 5;
+                img.style.left = position + "px";
+            }, 100);
+        }
+
+        function stopMove() {
+            clearInterval(interval);
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Event Handling Project</h1>
+</header>
+
+<nav>
+    <h2>Navigation</h2>
+    <a href="./index.html">Home</a><br>
+    <a href="./boards.html">Boards</a><br>
+    <a href="./dice.html">Dice Game</a><br>
+    <a href="./event.html">Event Handling</a><br>
+</nav>
+
+<main>
+    <button onclick="startMove()">Start</button>
+    <button onclick="stopMove()">Stop</button>
+
+    <div style="position: relative; height: 200px;">
+        <img id="robot" src="https://via.placeholder.com/100"
+             style="position: absolute; left: 0;">
+    </div>
+</main>
+
+<footer>
+    Ian Andalon<br>
+    University of Advancing Technology<br>
+    2625 W Baseline Rd<br>
+    Tempe, AZ 85283<br>
+</footer>
+
+</body>
+</html>
